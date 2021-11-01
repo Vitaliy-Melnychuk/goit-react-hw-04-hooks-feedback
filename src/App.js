@@ -12,9 +12,9 @@ const App = () => {
   const total = good + neutral + bad;
 
   const handleOnClick = (name) => {
-    if (name === 'good') {setGood(good + 1)}
-    if (name === 'neutral') {setNeutral(neutral + 1)}
-    if (name === 'bad') {setBad(bad + 1)}
+    if (name === 'good') {setGood(prevGood => prevGood + 1)}
+    if (name === 'neutral') {setNeutral(prevNeutral => prevNeutral+ 1)}
+    if (name === 'bad') {setBad(prevBad => prevBad + 1)}
   };
 
   const positivePercentage = Math.round(good / total * 100);
